@@ -29,4 +29,8 @@ form.addEventListener('submit', (e) => {
       'Content-Type': 'application/json',
     }
   })
+  .then(response => response.json())
+  .then(response => {
+    output.innerHTML = response.message;
+  })
 });
