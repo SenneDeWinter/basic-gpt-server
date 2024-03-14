@@ -14,4 +14,6 @@ form.addEventListener('submit', (e) => {
   console.log('prompt', prompt);
 
   if (!prompt) { return; }
+
+  loader.classList.remove('visually-hidden');
 });
