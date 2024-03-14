@@ -16,4 +16,17 @@ form.addEventListener('submit', (e) => {
   if (!prompt) { return; }
 
   loader.classList.remove('visually-hidden');
+
+  const data = {
+    prompt,
+    system,
+  };
+
+  fetch('/chat', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
 });
