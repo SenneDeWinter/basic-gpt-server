@@ -1,4 +1,5 @@
 const form = document.querySelector('.form');
+const input = document.querySelector('.input');
 const submit = document.querySelector('.btn--submit');
 const output = document.querySelector('.output');
 const loader = document.querySelector('.loader');
@@ -33,5 +34,6 @@ form.addEventListener('submit', (e) => {
   .then(response => {
     output.innerHTML = response.message;
     loader.classList.add('visually-hidden');
+    input.value = '';
   })
 });
