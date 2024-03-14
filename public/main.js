@@ -32,5 +32,6 @@ form.addEventListener('submit', (e) => {
   .then(response => response.json())
   .then(response => {
     output.innerHTML = response.message;
+    loader.classList.add('visually-hidden');
   })
 });
